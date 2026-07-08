@@ -43,7 +43,7 @@
               <path d="M9 5H21V7H9V5ZM9 11H21V13H9V11ZM9 17H21V19H9V17ZM3 5H5V7H3V5ZM3 11H5V13H3V11ZM3 17H5V19H3V17Z" fill="currentColor"/>
             </svg>
           </div>
-          <span class="font-bold text-xs lg:text-sm tracking-wider text-[#a8a29e] text-center lg:text-left">Balenrista BILL<br class="hidden lg:block">MANAGEMENT</span>
+          <span class="font-bold text-xs lg:text-sm tracking-wider text-[#a8a29e] text-center lg:text-left">Balenrista Slip<br class="hidden lg:block">MANAGEMENT</span>
         </div>
         
         <nav class="flex lg:flex-col p-2 lg:p-3 gap-1 lg:gap-0 lg:space-y-1 overflow-x-auto">
@@ -150,7 +150,7 @@
     // -------------------------------------------------------------
     // นำ URL ของ Web App จาก Google Apps Script มาใส่ตรงนี้ครับ
     // -------------------------------------------------------------
-    const API_URL = "https://script.google.com/macros/s/AKfycbxEmDYeDua7NjtdGtR2Ck0V1riT8GYnIR6kasEekzS32zXO411vTkvvcUwN-Wa4ckzb/exec"; 
+    const API_URL = "https://script.google.com/macros/s/AKfycbyk7-gxLKe-xfXR0sKEeWy6WK8p0uSKW56gW-c1B0Y5YMvl2AkudSfdIUkk_UHnnjyY/exec"; 
 
     let globalData = [];
     let selectedItem = null;
@@ -246,8 +246,8 @@
         div.id = `control-${item.docNo}`;
         div.onclick = () => selectInvoiceControl(item);
         let badge = item.isPrinted 
-          ? `<span class="text-[10px] lg:text-xs bg-[#1c1917] text-[#a8a29e] border border-[#2e2b2a] px-2 py-1 rounded">พิมพ์แล้ว</span>`
-          : `<span class="text-[10px] lg:text-xs bg-[#451a03] text-[#f97316] border border-[#7c2d12]/40 px-2 py-1 rounded">ยังไม่พิมพ์</span>`;
+          ? `<span class="text-[10px] lg:text-xs bg-[#1c1917] text-[#a8a29e] border border-[#2e2b2a] px-2 py-1 rounded">Done</span>`
+          : `<span class="text-[10px] lg:text-xs bg-[#451a03] text-[#f97316] border border-[#7c2d12]/40 px-2 py-1 rounded">Print</span>`;
         
         // เพิ่มการแสดงหมายเหตุ
         let noteHtml = item.note ? `<p class="text-[11px] text-[#ea580c]/80 italic mt-0.5 w-40 lg:w-auto truncate"><i class="fa-solid fa-pen-to-square"></i> ${escapeHTML(item.note)}</p>` : '';
